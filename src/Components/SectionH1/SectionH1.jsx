@@ -1,4 +1,4 @@
-export default function Section({ title, children }) {
+export default function SectionH1({ title, children }) {
   return (
     <>
       <h1>{title}</h1>
