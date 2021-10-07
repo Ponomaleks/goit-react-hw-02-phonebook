@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
+import s from './InputName.module.css';
 
 export default function InputName({ value, onChange }) {
   return (
-    <label className="nameLabel">
+    <label className={s.nameLabel}>
       Name
       <input
+        className={s.inputField}
         onChange={onChange}
         type="text"
         name="name"

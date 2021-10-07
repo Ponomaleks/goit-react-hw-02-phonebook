@@ -58,11 +58,7 @@ class App extends Component {
           <Form onSubmit={this.formSubmitHandler}></Form>
         </SectionH1>
         <SectionH2 title="Contacts">
-          <Filter
-            value={this.state.filter}
-            value={this.state.filter}
-            onChange={this.filterHundler}
-          />
+          <Filter value={this.state.filter} onChange={this.filterHundler} />
           <Contacts
             contactsList={filteredContacts}
             onDeleteContact={this.deleteContactHandler}

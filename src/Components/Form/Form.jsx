@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import s from './Form.module.css';
 
 import Button from './Button';
 import InputName from './InputName';
@@ -31,7 +32,7 @@ export default class Form extends Component {
 
   render() {
     return (
-      <form name="addContact" onSubmit={this.handleSubmit}>
+      <form className={s.form} name="addContact" onSubmit={this.handleSubmit}>
         <InputName value={this.state.name} onChange={this.handleChange} name="name"></InputName>
         <InputTel value={this.state.number} onChange={this.handleChange} name="number" />
         <Button type="submit" text="Add contact"></Button>

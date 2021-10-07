@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 
+import s from './Contacts.module.css';
+
 import ButtonDelete from './ButtonDelete';
 
 export default function Contacts({ contactsList, onDeleteContact }) {
@@ -7,7 +9,7 @@ export default function Contacts({ contactsList, onDeleteContact }) {
     <ul>
       {contactsList.map(contact => {
         return (
-          <li key={contact.id}>
+          <li className={s.contact} key={contact.id}>
             {contact.name}: {contact.number}{' '}
             <ButtonDelete
               type="button"
