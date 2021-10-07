@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function InputName({ value, onChange }) {
   return (
     <label className="nameLabel">
@@ -14,3 +16,8 @@ export default function InputName({ value, onChange }) {
     </label>
   );
 }
+
+InputName.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+};

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import ButtonDelete from './ButtonDelete';
 
 export default function Contacts({ contactsList, onDeleteContact }) {
@@ -19,3 +21,16 @@ export default function Contacts({ contactsList, onDeleteContact }) {
     </ul>
   );
 }
+
+ButtonDelete.propTypes = {
+  contactsList: PropTypes.arrayOf(
+    PropTypes.shape({
+      key: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      onClick: PropTypes.func,
+    }),
+  ),
+  onDeleteContact: PropTypes.func,
+};
